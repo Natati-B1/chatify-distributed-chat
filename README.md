@@ -1,4 +1,5 @@
 # chatify-distributed-chat
+
 Chatify is a real-time chat application built with distributed system architecture, supporting multi-node communication, fault tolerance, scalability, and persistent message storage.
 
 ## Requirements
@@ -15,30 +16,32 @@ Chatify is a real-time chat application built with distributed system architectu
 npm install
 ```
 
-2) Create your env file:
+1) Create your env file:
 
 ```bash
 copy .env.example .env
 ```
 
-3) Start MongoDB + Redis (easy option: Docker):
+1) Start MongoDB + Redis (easy option: Docker):
 
 ```bash
 docker compose up -d mongo redis
 ```
 
-4) Run the server:
+1) Run the server:
 
 ```bash
 npm run dev
 ```
 
 Open:
+
 - `http://localhost:3000`
 
 ## Run the full stack with Docker (3 server nodes + nginx)
 
 This runs:
+
 - `mongo` (MongoDB)
 - `redis` (Redis)
 - `chat-server-1/2/3` (3 replicas of the Node server)
@@ -51,6 +54,7 @@ npm run docker:up
 ```
 
 Open:
+
 - **Nginx (load-balanced)**: `http://localhost:8080`
 - **Direct nodes**: `http://localhost:5001` / `http://localhost:5002` / `http://localhost:5003`
 
