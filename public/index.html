@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chatify — Stay Connected Anytime, Anywhere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/chatify.css" />
+  </head>
+  <body>
+    <div class="landing">
+      <header class="landing-nav">
+        <a href="/" class="brand" aria-label="Chatify home">
+          <svg class="brand__icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="40" height="40" rx="12" fill="#6366F1" />
+            <path
+              d="M12 14h16v12H12V14zm2 2v8h12v-8H14zm2 2h8v1h-8v-1zm0 2.5h6v1h-6v-1zm0 2.5h8v1h-8v-1z"
+              fill="white"
+            />
+            <circle cx="30" cy="10" r="3" fill="#A5B4FC" />
+          </svg>
+          Chatify
+        </a>
+        <nav class="landing-nav__links" aria-label="Primary">
+          <a href="#features">Features</a>
+          <a href="#about">About</a>
+          <a href="/login.html" class="btn btn--primary btn--nav">Login</a>
+        </nav>
+      </header>
+
+      <main class="landing-hero">
+        <div>
+          <h1 class="landing-hero__title">Stay Connected Anytime, Anywhere.</h1>
+          <p class="landing-hero__text">
+            Chatify is a real-time chat application built with a distributed backend for high availability,
+            scalability, and reliability.
+          </p>
+          <div class="landing-hero__cta">
+            <a href="/login.html" class="btn btn--primary">Get Started</a>
+            <a href="#features" class="btn btn--ghost">Learn More</a>
+          </div>
+        </div>
+        <div class="landing-illustration" aria-hidden="true">
+          <svg viewBox="0 0 520 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="520" y2="380" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#EEF2FF" />
+                <stop offset="1" stop-color="#F8FAFC" />
+              </linearGradient>
+            </defs>
+            <rect width="520" height="380" rx="24" fill="url(#g1)" />
+            <ellipse cx="260" cy="320" rx="200" ry="28" fill="#E2E8F0" opacity="0.6" />
+            <!-- Floating bubbles -->
+            <rect x="48" y="56" width="120" height="40" rx="12" fill="#6366F1" opacity="0.9" />
+            <text x="72" y="82" fill="white" font-family="system-ui" font-size="12">Hey there!</text>
+            <rect x="340" y="48" width="140" height="36" rx="12" fill="#3B82F6" opacity="0.85" />
+            <text x="360" y="72" fill="white" font-family="system-ui" font-size="11">On my way</text>
+            <rect x="380" y="120" width="100" height="32" rx="10" fill="#A5B4FC" />
+            <!-- Woman -->
+            <path
+              d="M200 300c-8-40 4-88 32-96 28-8 48 32 48 80v16h-80v-16z"
+              fill="#334155"
+            />
+            <circle cx="232" cy="168" r="36" fill="#FDE68A" />
+            <path d="M232 200c-20 0-36 16-40 40l80 4c-4-26-20-44-40-44z" fill="#1E293B" />
+            <rect x="210" y="232" width="44" height="68" rx="8" fill="#6366F1" />
+            <path d="M188 288h88l-8 28h-72l-8-28z" fill="#312E81" />
+            <rect x="218" y="248" width="28" height="52" rx="6" fill="#0F172A" opacity="0.15" />
+            <!-- Man -->
+            <path
+              d="M312 300c8-44-8-92-36-100s-48 36-48 84v16h84v-16z"
+              fill="#334155"
+            />
+            <circle cx="288" cy="172" r="36" fill="#FDBA74" />
+            <path d="M288 204c22 0 38 16 42 40l-84 4c4-26 18-44 42-44z" fill="#1E293B" />
+            <rect x="266" y="236" width="44" height="64" rx="8" fill="#3B82F6" />
+            <path d="M246 288h84l-10 28h-64l-10-28z" fill="#1E40AF" />
+            <rect x="274" y="252" width="28" height="48" rx="6" fill="#0F172A" opacity="0.12" />
+          </svg>
+        </div>
+      </main>
+
+      <section class="landing-sections" id="features">
+        <h2>Features</h2>
+        <p>
+          Real-time messaging with WebSockets, multiple chat server nodes behind Nginx, Redis Pub/Sub for
+          cross-node delivery, and MongoDB for durable history—with eventual consistency for scale and
+          availability.
+        </p>
+      </section>
+      <section class="landing-sections" id="about">
+        <h2>About</h2>
+        <p>
+          Chatify demonstrates a distributed pattern: clients hit a load balancer, application nodes share
+          state through Redis, and messages persist in MongoDB so the UI stays fast and reliable.
+        </p>
+      </section>
+    </div>
+  </body>
+</html>
